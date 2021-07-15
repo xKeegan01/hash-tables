@@ -40,6 +40,18 @@ class HashTable {
         return undefined;
     }
 
+//remove specific key value
+    remove(key) {
+        let index = this._hash(key);
+        if (this.keyMap[index] && this.keyMap[index].length) {
+          this.keyMap[index] = undefined;
+          this.size--;
+          return true;
+        } else {
+          return false;
+        }
+      }
+
 //get array of all values
     values() {
         let valuesArray = [];
