@@ -27,7 +27,7 @@ class HashTable {
     }
 
 
-//get the 
+//get the value of specific element
     get(key) {
         let index = this._hash(key);
         if (this.keyMap[index]) {
